@@ -1,0 +1,21 @@
+.title-box{
+    margin-bottom: 50px;
+}
+
+.title-box > hr{
+    box-sizing: content-box;
+    height: 0px;
+    overflow: visible;
+    width: calc(1rem + 18vh);
+    border: solid 2px;
+    border-radius: 10px;
+}
+
+.title-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+}

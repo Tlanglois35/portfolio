@@ -1,0 +1,39 @@
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+}
+
+.name{
+    font-size: 4.5rem;
+}
+
+.header-body{
+    max-width: 620px;
+}
+
+.header-typed{
+    font-size: 2rem;
+}
+
+.typed-cursor{
+    font-size: 2rem;
+}
+
+.header-arrow{
+    bottom: 25px !important;
+    transition: 0.15s ease-in;
+    user-select: none;
+}
+
+.header-arrow:hover{
+    cursor: pointer;
+    opacity: 1 !important;
+}

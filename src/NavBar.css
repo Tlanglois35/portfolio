@@ -1,0 +1,34 @@
+.NavBar {
+  background-color: #282c34;
+  display: flex;
+  font-size: calc(10px + 1vmin);
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.fixed-style{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.ico{
+  width: 60px;
+  padding: 10px 5px;
+  user-select: none;
+}
+
+.ico:hover{
+  cursor: pointer;
+  background-color: rgb(55 65 81 / 1);
+  border-radius: 15px;
+}
+
+.logo{
+  fill: white;
+  width: 125px;
+  height: 85px;
+}

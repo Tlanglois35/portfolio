@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import NavBar from './NavBar.js';
+import Header from "./Header.js";
+import Body from './Body.js';
+import Footer from './Footer.js';
+import useClassName from './Clock.js';
+import { useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const automaticTime = useClassName(); // Mode automatique basé sur l'heure
+  const [manualTime, setManualTime] = useState(null); // Mode manuel
+
+  // Priorité au mode manuel si défini
+  const Time = manualTime || automaticTime;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${Time}`}>
+      <NavBar Time={Time} setManualTime={setManualTime} />
+      <Header Time={Time}/>
+      <Body Time={Time} />
+      <Footer Time={Time} />
     </div>
   );
 }
