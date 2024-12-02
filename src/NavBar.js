@@ -6,20 +6,22 @@ import { ReactComponent as Logo } from './icon.svg';
 import "./NavBar.css";
 
 function NavBar({ Time, setManualTime }) {
-  const [value, setValue] = useState(null);
 
   // Gère le clic pour basculer entre jour et nuit
   const toggleTime = () => {
     setManualTime((prev) => (prev === 'day' ? 'night' : 'day'));
   };
 
+  const [value, setValue] = useState(null);
   const handleChange = (event, newValue) => {
     setValue(newValue);  // Met à jour la valeur de l'onglet sélectionné
   };
 
   return (
     <nav className="NavBar fixed-style" role='navigation'>
-      <Logo className="logo" />
+      <a href='#main' style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Logo className="logo"/>
+      </a>
       <div className="pill-nav">
         <Tabs
           value={value === null ? false : value}
