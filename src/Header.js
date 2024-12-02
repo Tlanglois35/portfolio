@@ -44,9 +44,11 @@ function Header({ Time }) {
                     </div>
                 </div>
             </div>
+            <a href="#presentation" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="header-arrow position-absolute start-50 translate-middle-x opacity-75">
                 <FontAwesomeIcon icon={faChevronDown} size="5x" />
             </div>
+            </a>
         </div>
     );
 }
