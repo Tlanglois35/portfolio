@@ -17,8 +17,10 @@ function App() {
   return (
     <div className={`App ${Time}`}>
       <NavBar Time={Time} setManualTime={setManualTime} />
-      <Header Time={Time}/>
-      <Presentation Time={Time} />
+      <Header Time={Time} />
+      <div id="presentation">
+        <Presentation Time={Time} />
+      </div>
       <Footer Time={Time} />
     </div>
   );

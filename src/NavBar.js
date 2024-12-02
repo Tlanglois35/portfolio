@@ -6,11 +6,15 @@ import { ReactComponent as Logo } from './icon.svg';
 import "./NavBar.css";
 
 function NavBar({ Time, setManualTime }) {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(null);
 
   // Gère le clic pour basculer entre jour et nuit
   const toggleTime = () => {
     setManualTime((prev) => (prev === 'day' ? 'night' : 'day'));
+  };
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);  // Met à jour la valeur de l'onglet sélectionné
   };
 
   return (
@@ -18,30 +22,30 @@ function NavBar({ Time, setManualTime }) {
       <Logo className="logo" />
       <div className="pill-nav">
         <Tabs
-          value={value}
-          onChange={(event, newValue) => setValue(newValue)}
+          value={value === null ? false : value}
+          onChange={handleChange}
           textColor="inherit"
           TabIndicatorProps={{
             style: { backgroundColor: 'white' },
           }}
         >
-          <Tab label="Présentation" />
-          <Tab label="Compétences" />
-          <Tab label="Parcours" />
-          <Tab label="Projets" />
-          <Tab label="Contact" />
+          <Tab label="Présentation" component="a" href="#presentation" />
+          <Tab label="Compétences" component="a" href="#competences" />
+          <Tab label="Parcours" component="a" href="#parcours" />
+          <Tab label="Projets" component="a" href="#projets" />
+          <Tab label="Contact" component="a" href="#contact" />
         </Tabs>
       </div>
       <div>
         {/* Change l'icône et bascule entre les modes */}
         {Time === 'day' ? (
-            <div className='ico'>
-                <FontAwesomeIcon icon={faSun} size="2x" onClick={toggleTime}/>
-            </div>
+          <div className='ico'>
+            <FontAwesomeIcon icon={faSun} size="2x" onClick={toggleTime} />
+          </div>
         ) : (
-            <div className='ico'>
-                <FontAwesomeIcon icon={faMoon} size="2x" onClick={toggleTime} />
-            </div>
+          <div className='ico'>
+            <FontAwesomeIcon icon={faMoon} size="2x" onClick={toggleTime} />
+          </div>
         )}
       </div>
     </nav>
