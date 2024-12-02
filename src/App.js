@@ -1,6 +1,6 @@
 import NavBar from './NavBar.js';
 import Header from "./Header.js";
-import Body from './Body.js';
+import Presentation from './Presentation.js';
 import Footer from './Footer.js';
 import useClassName from './Clock.js';
 import { useState } from 'react';
@@ -18,7 +18,7 @@ function App() {
     <div className={`App ${Time}`}>
       <NavBar Time={Time} setManualTime={setManualTime} />
       <Header Time={Time}/>
-      <Body Time={Time} />
+      <Presentation Time={Time} />
       <Footer Time={Time} />
     </div>
   );

@@ -1,10 +1,10 @@
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import './Body.css';
+import './Presentation.css';
 
 
-function Body({ Time }) {
+function Présentation({ Time }) {
     let ColorT
     Time === 'day' ? ColorT = "white" : ColorT = "#575757"
     return (
@@ -74,4 +74,4 @@ function Body({ Time }) {
     );
 }
 
-export default Body;
+export default Présentation;
