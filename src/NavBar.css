@@ -18,7 +18,7 @@
 
 .ico {
   width: 60px;
-  padding: 5px 2px !important;
+  padding: 8px 2px !important;
   user-select: none;
   transition: all 0.4s ease; /* Transition fluide pour tous les effets */
   opacity: 1; /* L'icône est complètement visible par défaut */

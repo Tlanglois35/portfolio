@@ -57,7 +57,7 @@ function Présentation({ Time }) {
                             width: '300px',
                             height: '300px',
                             objectFit: 'cover',
-                            borderRadius: '50%',
+                            borderRadius: '35%',
                             border: `solid 5px ${ColorT}`,
                             boxShadow:''
                         }}

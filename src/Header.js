@@ -10,9 +10,9 @@ function Header({ Time }) {
         // Initialisation de Typed.js après le montage du composant
         const options = {
             strings: [
-                "BTS 2e année prépa Igénieur ISEN OUEST",
+                "BTS 2e année prépa Ingénieur ISEN OUEST",
                 "Recherche d'atlerance",
-                "Recherche d'alternance Igénieur en automatisme"
+                "Recherche d'alternance Ingénieur en automatisme"
             ],
             typeSpeed: 80,
             backSpeed: 40,

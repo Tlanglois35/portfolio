@@ -1,5 +1,6 @@
 .title-box{
     margin-bottom: 50px;
+    margin-top: 5px;
 }
 
 .title-box > hr{
@@ -8,6 +9,9 @@
     overflow: visible;
     border: solid 2px;
     border-radius: 10px;
+    opacity: 1;
+    margin: 1vh auto;
+    width: 50%;
 }
 
 .title-content{

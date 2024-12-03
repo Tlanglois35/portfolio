@@ -1,30 +1,52 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Tabs, Tab } from '@mui/material';
 import { ReactComponent as Logo } from './icon.svg';
 import "./NavBar.css";
 
 function NavBar({ Time, setManualTime }) {
+  const [value, setValue] = useState(null);
 
-  // Gère le clic pour basculer entre jour et nuit
-  const toggleTime = () => {
-    setManualTime((prev) => (prev === 'day' ? 'night' : 'day'));
+  // Fonction pour obtenir l'index de l'onglet en fonction du hash
+  const getHashValue = (hash) => {
+    switch (hash) {
+      case '#presentation':
+        return 0;
+      case '#competences':
+        return 1;
+      case '#parcours':
+        return 2;
+      case '#projets':
+        return 3;
+      case '#contact':
+        return 4;
+      default:
+        return null;
+    }
   };
 
-  const [value, setValue] = useState(null);
+  // Synchronise la sélection d'onglet avec le hash dans l'URL
+  useEffect(() => {
+    const hash = window.location.hash;
+    const tabIndex = getHashValue(hash);
+    setValue(tabIndex);
+  }, [window.location.hash]);
+
   const handleChange = (event, newValue) => {
-    setValue(newValue);  // Met à jour la valeur de l'onglet sélectionné
+    setValue(newValue);
+    const hash = ['#presentation', '#competences', '#parcours', '#projets', '#contact'][newValue] || '#header';
+    window.history.replaceState(null, '', hash);
   };
 
   return (
     <nav className="NavBar fixed-style" role='navigation'>
-      <a href='#main' style={{ textDecoration: 'none', color: 'inherit' }}>
-        <Logo className="logo"/>
+      <a href='#header' style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Logo className="logo" />
       </a>
       <div className="pill-nav">
         <Tabs
-          value={value === null ? false : value}
+          value={value !== null ? value : false}
           onChange={handleChange}
           textColor="inherit"
           TabIndicatorProps={{
@@ -42,11 +64,11 @@ function NavBar({ Time, setManualTime }) {
         {/* Change l'icône et bascule entre les modes */}
         {Time === 'day' ? (
           <div className='ico'>
-            <FontAwesomeIcon icon={faSun} size="2x" onClick={toggleTime}/>
+            <FontAwesomeIcon icon={faSun} size="2x" onClick={() => setManualTime('night')} />
           </div>
         ) : (
           <div className='ico'>
-            <FontAwesomeIcon icon={faMoon} size="2x" onClick={toggleTime} />
+            <FontAwesomeIcon icon={faMoon} size="2x" onClick={() => setManualTime('day')} />
           </div>
         )}
       </div>
