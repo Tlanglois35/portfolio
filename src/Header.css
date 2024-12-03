@@ -9,6 +9,7 @@
 .header-content{
     display: flex;
     align-items: center;
+    gap: 30px;
 }
 
 .name{
@@ -16,7 +17,7 @@
 }
 
 .header-body{
-    max-width: 620px;
+    max-width: 616px;
 }
 
 .header-typed{
@@ -36,4 +37,9 @@
 .header-arrow:hover{
     cursor: pointer;
     opacity: 1 !important;
+}
+
+.header-logo{
+    width: 300px;
+    height: 300px;
 }

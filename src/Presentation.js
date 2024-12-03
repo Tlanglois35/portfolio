@@ -1,6 +1,9 @@
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileLines } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import './Presentation.css';
 
 
@@ -20,7 +23,12 @@ function Présentation({ Time }) {
                     height: 'auto',
                     margin: '3% auto',
                     borderRadius: '15px',
-                    padding: '2%',
+                    padding: '2% 6%',
+                    // Media query pour écrans ≤ 1300px
+                    '@media (max-width: 1300px)': {
+                        width: '100%',
+                        borderRadius: '0',
+                    },
                 }}
             >
                 {/* Titre */}
@@ -56,18 +64,32 @@ function Présentation({ Time }) {
                     />
 
                     {/* Texte */}
+                    <div>
                     <Typography
                         component="div"
                         variant="body1"
                         sx={{
-                            maxWidth: '60%', // Limite la largeur du texte
-                            fontSize: 'calc(1rem + 0.5vw)',                        
+                            fontSize: 'calc(1rem + 0.5vw)',
+                            textAlign: 'justify',                        
                         }}
                     >
-                        J'me présente je m'appelle henry<br />
-                        Et j'voudrai bien réussir ma vie<br />
-                        Être aimé
+                        <p>J'me présente je m'appelle henryd sdkdfk dkhfk dhfkd fhksdhfks dhfk shdfkhskdhf skdhf skhfs dfhs fkshd fks fshd fkhfskhdf skfh skfsd hfkdfh sdfksdhf skdf dfksdhf skdf skfsd fhsf hskfsdh fskdf fkhsdfhs kfhs fsk</p>
                     </Typography>
+                    <div className="d-flex justify-content-around mb-2 mt-4">
+                    <a className='p-ico' href='/docs/CV_ThomasL.pdf' target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faFileLines} size='3x'/>
+                        <span>CV</span>
+                    </a>
+                    <a className='p-ico' href='https://www.linkedin.com/in/thomas-langlois-ba904b226/?trk=opento_sprofile_goalscard' target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faLinkedin} size='3x'/>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a className='p-ico' href='https://github.com/Tlanglois35' target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGithub} size='3x'/>
+                        <span>GitHub</span>
+                    </a>
+                    </div>
+                    </div>
                 </div>
             </Card>
         </div>

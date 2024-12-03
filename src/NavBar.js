@@ -42,7 +42,7 @@ function NavBar({ Time, setManualTime }) {
         {/* Change l'icône et bascule entre les modes */}
         {Time === 'day' ? (
           <div className='ico'>
-            <FontAwesomeIcon icon={faSun} size="2x" onClick={toggleTime} />
+            <FontAwesomeIcon icon={faSun} size="2x" onClick={toggleTime}/>
           </div>
         ) : (
           <div className='ico'>
