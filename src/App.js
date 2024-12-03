@@ -14,12 +14,14 @@ function App() {
 
   const headerRef = useRef(null);
   const presentationRef = useRef(null);
+  const contactRef = useRef(null);
 
   const Time = manualTime || automaticTime;
 
   useEffect(() => {
-    const headerNode = headerRef.current; // Copie dans une variable locale
+    const headerNode = headerRef.current; 
     const presentationNode = presentationRef.current;
+    const contactNode = contactRef.current;
   
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -33,10 +35,12 @@ function App() {
   
     if (headerNode) observer.observe(headerNode);
     if (presentationNode) observer.observe(presentationNode);
+    if (contactNode) observer.observe(contactNode);
   
     return () => {
-      if (headerNode) observer.unobserve(headerNode); // Utilise la variable locale
-      if (presentationNode) observer.unobserve(presentationNode); // Utilise la variable locale
+      if (headerNode) observer.unobserve(headerNode);
+      if (presentationNode) observer.unobserve(presentationNode);
+      if (contactNode) observer.unobserve(contactNode)
     };
   }, []); // Gardez un tableau de dépendances vide si nécessaire
 
@@ -48,8 +52,10 @@ function App() {
       </div>
       <div id="presentation" ref={presentationRef}>
         <Presentation Time={Time} />
+      </div >
+      <div id="contact" ref={contactRef}>
+        <Footer Time={Time} />
       </div>
-      <Footer Time={Time} />
     </div>
   );
 }
