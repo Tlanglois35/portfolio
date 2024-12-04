@@ -2,6 +2,9 @@ import NavBar from './NavBar.js';
 import Header from "./Header.js";
 import Presentation from './Presentation.js';
 import Footer from './Footer.js';
+import Skill from './Skill.js';
+import Career from './Career.js'
+import Project from './Project.js'
 import useClassName from './Clock.js';
 import { useState, useRef, useEffect } from 'react';
 import './App.css';
@@ -53,6 +56,15 @@ function App() {
       <div id="presentation" ref={presentationRef}>
         <Presentation Time={Time} />
       </div >
+      <div id="skill">
+          <Skill Time={Time} />
+      </div>
+      <div id='career'>
+        <Career Time={Time} />
+      </div>
+      <div id='project'>
+        <Project Time={Time} />
+      </div>
       <div id="contact" ref={contactRef}>
         <Footer Time={Time} />
       </div>

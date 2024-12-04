@@ -51,7 +51,7 @@ function Présentation({ Time }) {
                     {/* Image */}
                     <CardMedia
                         component="img"
-                        image="/pic.jpg"
+                        image="/pic_M.png"
                         alt='selfie'
                         sx={{
                             width: '300px',

@@ -14,14 +14,15 @@
   left: 0;
   z-index: 1030;
   padding: 10px 0;
+  box-shadow: 0px 1px 17px 0px #535050;
 }
 
 .ico {
   width: 60px;
   padding: 8px 2px !important;
   user-select: none;
-  transition: all 0.4s ease; /* Transition fluide pour tous les effets */
-  opacity: 1; /* L'icône est complètement visible par défaut */
+  transition: all 0.4s ease;
+  opacity: 1;
 }
 
 .ico:hover {
