@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileLines } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import './Presentation.css';
+import Texte from './TexteP.js'
 
 
 function Présentation({ Time }) {
@@ -24,6 +25,7 @@ function Présentation({ Time }) {
                     margin: '3% auto',
                     borderRadius: '15px',
                     padding: '2% 6%',
+                    boxShadow: '0px 0px 7px 0px rgb(40 44 52)',
                     // Media query pour écrans ≤ 1300px
                     '@media (max-width: 1300px)': {
                         width: '100%',
@@ -58,8 +60,7 @@ function Présentation({ Time }) {
                             height: '300px',
                             objectFit: 'cover',
                             borderRadius: '35%',
-                            border: `solid 5px ${ColorT}`,
-                            boxShadow: '3px 3px 17px -2px #100e0e',
+                            boxShadow: '0px 0px 7px 4px #575757ad',
                         }}
                     />
 
@@ -73,7 +74,7 @@ function Présentation({ Time }) {
                             textAlign: 'justify',                        
                         }}
                     >
-                        <p>J'me présente je m'appelle henryd sdkdfk dkhfk dhfkd fhksdhfks dhfk shdfkhskdhf skdhf skhfs dfhs fkshd fks fshd fkhfskhdf skfh skfsd hfkdfh sdfksdhf skdf dfksdhf skdf skfsd fhsf hskfsdh fskdf fkhsdfhs kfhs fsk</p>
+                        <Texte />
                     </Typography>
                     <div className="d-flex justify-content-around mb-2 mt-4">
                     <a className='p-ico' href='/docs/CV_ThomasL.pdf' target="_blank" rel="noopener noreferrer">

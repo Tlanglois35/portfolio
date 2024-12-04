@@ -1,81 +1,126 @@
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import "./Skill.css"
+import React from 'react';
+import { Typography, Box } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDatabase, faGears, faExplosion, faPlug, faObjectUngroup, faLayerGroup, faWaveSquare, faC } from '@fortawesome/free-solid-svg-icons';
+import { faPython, faGithub, faJava, faHtml5, faCss3Alt, faJs, faPhp, faReact } from '@fortawesome/free-brands-svg-icons';
+import './Skill.css'
 
-function Skill({ Time }){
-    let ColorT
-    Time === 'day' ? ColorT = "white" : ColorT = "#575757"
-    return(
-        <div className="Skill-box">
-                        <Card
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    backgroundColor: '#282c34',
-                    color: 'white',
-                    width: '70%',
-                    height: 'auto',
-                    margin: '3% auto',
-                    borderRadius: '15px',
-                    padding: '2% 6%',
-                    // Media query pour écrans ≤ 1300px
-                    '@media (max-width: 1300px)': {
-                        width: '100%',
-                        borderRadius: '0',
-                    },
+function Skill() {
+    const categories = [
+    {
+    title: 'Développement Logiciel',
+        skills: ['C', 'C++', 'Python', 'Java'],
+    },
+    {
+        title: 'Développement Web',
+        skills: ['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'SQL'],
+    },
+    {
+        title: 'Électronique',
+        skills: ['Conception', 'Brasure', 'Câblage', 'Lecture schématique', 'Routage'],
+    },
+    {
+        title: 'Outils',
+        skills: ['Proteus', 'Cisco', 'GitHub', 'Oscilloscope'],
+    },
+];
+
+const skillIcons = {
+    C: <FontAwesomeIcon icon={faC} size='3x' color='white'/>,
+    'C++':  <img
+                src='./img/C++.png'
+                alt='C++'
+                className="skill-icon"
+            />,
+    Python: <FontAwesomeIcon icon={faPython} size='3x' color='white'/>,
+    Java: <FontAwesomeIcon icon={faJava} size='3x' color='white'/>,
+    HTML: <FontAwesomeIcon icon={faHtml5} size='3x' color='white'/>,
+    CSS: <FontAwesomeIcon icon={faCss3Alt} size='3x' color='white'/>,
+    JavaScript: <FontAwesomeIcon icon={faJs} size='3x' color='white'/>,
+    PHP: <FontAwesomeIcon icon={faPhp} size='3x' color='white'/>,
+    React: <FontAwesomeIcon icon={faReact} size='3x' color='white'/>,
+    SQL: <FontAwesomeIcon icon={faDatabase} size='3x' color='white'/>,
+    Conception: <FontAwesomeIcon icon={faGears} size='3x' color='white'/>,
+    Brasure: <FontAwesomeIcon icon={faExplosion} size='3x' color='white'/>,
+    Câblage: <FontAwesomeIcon icon={faPlug} size='3x' color='white'/>,
+    'Lecture schématique': <FontAwesomeIcon icon={faObjectUngroup} size='3x' color='white'/>,
+    Routage: <FontAwesomeIcon icon={faLayerGroup} size='3x' color='white'/>,
+    Proteus: <img
+                src='./img/Proteus.png'
+                alt='Proteus'
+                style={{height: '3rem',}}/>,
+    Cisco: <img
+                src='./img/Cisco.png'
+                alt='Cisco'
+                style={{height: '3rem',}}/>,
+    GitHub: <FontAwesomeIcon icon={faGithub} size='3x' color='white'/>,
+    Oscilloscope: <FontAwesomeIcon icon={faWaveSquare} size='3x' color='white'/>,
+  };
+
+
+    return (
+        <Box sx={{ padding: '2rem' }}>
+
+            <Typography variant="h3" align="center" gutterBottom>
+                COMPÉTENCES
+                <hr className='skill-hr'/>
+            </Typography>
+            <div
+                style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                gap: '2rem',
+                marginTop: '2%',
                 }}
             >
-                {/* Titre */}
-                <div className='title-box'>
-                <Typography
-                    component="h1"
-                    variant="h3"
-                    sx={{
-                        textAlign: 'center',
+            {categories.map((category) => (
+            <div
+                key={category.title}
+                style={{
+                padding: '1rem',
+                borderRadius: '8px',
+                backgroundColor: "#282c34",
+                boxShadow: "0px 0px 7px 0px rgb(40 44 52)",
+                }}
+            >
+            <Typography
+                variant="h6"
+                gutterBottom
+                style={{
+                borderBottom: '2px solid #ccc',
+                paddingBottom: '0.5rem',
+                color: 'white',
+                }}
+            >
+            {category.title}
+            </Typography>
+            <div
+                style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
+                gap: '1rem',
+                marginTop: '15px',
+                }}
+            >
+            {category.skills.map((skill) => (
+                <div
+                    key={skill}
+                    style={{
+                    textAlign: 'center',
                     }}
                 >
-                    COMPÉTENCES
+                {skillIcons[skill]}
+                <Typography variant="body2" style={{ marginTop: '0.5rem', color: 'white', }}>
+                {skill}
                 </Typography>
-
-                <hr style={{ color: ColorT }} />
-
                 </div>
-                {/* Contenu */}
-                <div className='title-content'>
-                    {/* Image */}
-                    <CardMedia
-                        component="img"
-                        image="/pic_M.png"
-                        alt='selfie'
-                        sx={{
-                            width: '300px',
-                            height: '300px',
-                            objectFit: 'cover',
-                            borderRadius: '35%',
-                            border: `solid 5px ${ColorT}`,
-                            boxShadow: '3px 3px 17px -2px #100e0e',
-                        }}
-                    />
-
-                    {/* Texte */}
-                    <div>
-                    <Typography
-                        component="div"
-                        variant="body1"
-                        sx={{
-                            fontSize: 'calc(1rem + 0.5vw)',
-                            textAlign: 'justify',                        
-                        }}
-                    >
-                        <p>J'me présente je m'appelle henryd sdkdfk dkhfk dhfkd fhksdhfks dhfk shdfkhskdhf skdhf skhfs dfhs fkshd fks fshd fkhfskhdf skfh skfsd hfkdfh sdfksdhf skdf dfksdhf skdf skfsd fhsf hskfsdh fskdf fkhsdfhs kfhs fsk</p>
-                    </Typography>
-                    </div>
-                </div>
-            </Card>
-        </div>
+            ))}
+            </div>
+            </div>
+            ))}
+            </div>
+        </Box>
     );
-};
+}
 
-export default Skill
+export default Skill;

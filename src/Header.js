@@ -12,7 +12,7 @@ function Header({ Time }) {
             strings: [
                 "BTS 2e année prépa Ingénieur ISEN OUEST",
                 "Recherche d'atlerance",
-                "Recherche d'alternance Ingénieur en automatisme"
+                "Recherche d'alternance Ingénieur en automatisme "
             ],
             typeSpeed: 80,
             backSpeed: 40,
