@@ -54,9 +54,11 @@ function App() {
         <Header Time={Time} />
       </div>
       <div id="presentation" ref={presentationRef}>
+        <div style={{padding: '50px',}}></div>
         <Presentation Time={Time} />
       </div >
       <div id="skill">
+        <div style={{padding: '50px',}}></div>
           <Skill Time={Time} />
       </div>
       <div id='career'>

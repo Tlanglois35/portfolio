@@ -29,7 +29,7 @@
 }
 
 .header-arrow{
-    bottom: 25px !important;
+    bottom: 10px !important;
     transition: 0.15s ease-in;
     user-select: none;
 }
