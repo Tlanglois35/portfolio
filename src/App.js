@@ -17,6 +17,7 @@ function App() {
 
   const headerRef = useRef(null);
   const presentationRef = useRef(null);
+  const skillRef = useRef(null);
   const contactRef = useRef(null);
 
   const Time = manualTime || automaticTime;
@@ -24,6 +25,7 @@ function App() {
   useEffect(() => {
     const headerNode = headerRef.current; 
     const presentationNode = presentationRef.current;
+    const skillNode = skillRef.current;
     const contactNode = contactRef.current;
   
     const observer = new IntersectionObserver(
@@ -33,16 +35,18 @@ function App() {
           window.history.replaceState(null, '', `#${entry.target.id}`);
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.8 }
     );
   
     if (headerNode) observer.observe(headerNode);
     if (presentationNode) observer.observe(presentationNode);
+    if (skillNode) observer.observe(skillNode);
     if (contactNode) observer.observe(contactNode);
   
     return () => {
       if (headerNode) observer.unobserve(headerNode);
       if (presentationNode) observer.unobserve(presentationNode);
+      if (skillNode) observer.unobserve(skillNode);
       if (contactNode) observer.unobserve(contactNode)
     };
   }, []); // Gardez un tableau de dépendances vide si nécessaire
@@ -57,7 +61,7 @@ function App() {
         <div style={{padding: '50px',}}></div>
         <Presentation Time={Time} />
       </div >
-      <div id="skill">
+      <div id="skill" ref={skillRef}>
         <div style={{padding: '50px',}}></div>
           <Skill Time={Time} />
       </div>

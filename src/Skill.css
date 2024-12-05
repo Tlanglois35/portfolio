@@ -8,3 +8,16 @@
     margin: 0.5vh auto;
     width: 12%;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2%;
+  }
+  
+  @media (max-width: 1300px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

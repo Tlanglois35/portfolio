@@ -13,7 +13,7 @@ function NavBar({ Time, setManualTime }) {
     switch (hash) {
       case '#presentation':
         return 0;
-      case '#competences':
+      case '#skill':
         return 1;
       case '#parcours':
         return 2;
@@ -35,7 +35,7 @@ function NavBar({ Time, setManualTime }) {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    const hash = ['#presentation', '#competences', '#parcours', '#projets', '#contact'][newValue] || '#header';
+    const hash = ['#presentation', '#skill', '#parcours', '#projets', '#contact'][newValue] || '#header';
     window.history.replaceState(null, '', hash);
   };
 
@@ -54,7 +54,7 @@ function NavBar({ Time, setManualTime }) {
           }}
         >
           <Tab label="Présentation" component="a" href="#presentation" />
-          <Tab label="Compétences" component="a" href="#competences" />
+          <Tab label="Compétences" component="a" href="#skill" />
           <Tab label="Parcours" component="a" href="#parcours" />
           <Tab label="Projets" component="a" href="#projets" />
           <Tab label="Contact" component="a" href="#contact" />

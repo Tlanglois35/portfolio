@@ -65,14 +65,7 @@ const skillIcons = {
                 COMPÉTENCES
                 <hr className='skill-hr'/>
             </Typography>
-            <div
-                style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                gap: '2rem',
-                marginTop: '2%',
-                }}
-            >
+            <div className='grid-container'>
             {categories.map((category) => (
             <div
                 key={category.title}
