@@ -6,7 +6,7 @@
     border-radius: 10px;
     opacity: 1;
     margin: 0.5vh auto;
-    width: 20%;
+    width: 260px;
 }
 
 .grid-container {
@@ -16,7 +16,7 @@
     margin-top: 2%;
   }
   
-  @media (max-width: 1300px) {
+  @media (max-width: 1375px) {
     .grid-container {
       grid-template-columns: repeat(2, 1fr);
     }

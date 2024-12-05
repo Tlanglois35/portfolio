@@ -66,6 +66,7 @@ function App() {
           <Skill Time={Time} />
       </div>
       <div id='career'>
+        <div style={{padding: '50px',}}></div>
         <Career Time={Time} />
       </div>
       <div id='project'>
