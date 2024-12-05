@@ -1,9 +1,17 @@
+import React from 'react';
+import { Typography, Box } from '@mui/material';
 import "./Career.css"
 
-function Skill({ Time }){
+function Career({ Time }){
     return(
-        <div className="Career-box">Parcours</div>
+        <Box sx={{ padding: '2rem' }}>
+
+            <Typography variant="h3" align="center" gutterBottom>
+                Parcours
+                <hr className='hr' style={{width: '10%',}}/>
+            </Typography>
+        </Box>
     );
 };
 
-export default Skill
+export default Career;

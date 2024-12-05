@@ -20,7 +20,7 @@ function Présentation({ Time }) {
                     alignItems: 'center',
                     backgroundColor: '#282c34',
                     color: 'white',
-                    width: '70%',
+                    width: '90%',
                     height: 'auto',
                     margin: '3% auto',
                     borderRadius: '15px',
@@ -61,22 +61,24 @@ function Présentation({ Time }) {
                             objectFit: 'cover',
                             borderRadius: '35%',
                             boxShadow: '0px 0px 7px 4px #575757ad',
+                            top: '-70px',
+                            position: 'relative',
                         }}
                     />
 
                     {/* Texte */}
-                    <div>
+                    <div className='pres-box'>
                     <Typography
                         component="div"
                         variant="body1"
                         sx={{
-                            fontSize: 'calc(1rem + 0.5vw)',
-                            textAlign: 'justify',                        
+                            fontSize: 'calc(0.86rem + 0.5vw)',
+                            textAlign: 'center',                        
                         }}
                     >
                         <Texte />
                     </Typography>
-                    <div className="d-flex justify-content-around mb-2 mt-4">
+                    <div className="d-flex justify-content-around mb-2 mt-4 gap-5">
                     <a className='p-ico' href='/docs/CV_ThomasL.pdf' target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faFileLines} size='3x'/>
                         <span>CV</span>

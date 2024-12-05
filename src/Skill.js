@@ -63,7 +63,7 @@ const skillIcons = {
 
             <Typography variant="h3" align="center" gutterBottom>
                 COMPÉTENCES
-                <hr className='skill-hr'/>
+                <hr className='hr'/>
             </Typography>
             <div className='grid-container'>
             {categories.map((category) => (

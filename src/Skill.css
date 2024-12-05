@@ -1,4 +1,4 @@
-.skill-hr{
+.hr{
     box-sizing: content-box;
     height: 0px;
     overflow: visible;
@@ -6,7 +6,7 @@
     border-radius: 10px;
     opacity: 1;
     margin: 0.5vh auto;
-    width: 12%;
+    width: 20%;
 }
 
 .grid-container {

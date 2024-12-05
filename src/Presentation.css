@@ -23,6 +23,12 @@
     width: 100%;
 }
 
+.pres-box{
+    display: flex;
+    flex-direction: column;
+    width: 51%;
+}
+
 .p-ico{
     display: flex;
     flex-direction: column;
