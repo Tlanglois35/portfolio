@@ -1,0 +1,43 @@
+{
+    "projects": [
+        {
+        "information": {
+            "title": "Spoti-4-NZXT : Intégration Spotify pour écran NZXT",
+            "date": "Novembre 2024",
+            "cadre": "Projet Personnel",
+            "participant": 1,
+            "technologie": "JavaScript / Python / HTML / CSS",
+            "src": "./img/NZXTPic.png"
+        },
+        "description": {
+            "text": "larem ipsum"
+        }
+        },
+        {
+        "information": {
+            "title": "Projet Electronique : Système domotique",
+            "date": "Février 2024 - Mai 2024",
+            "cadre": "Projet Personnel",
+            "participant": 1,
+            "technologie": "JavaScript / Python / HTML / CSS / PHP / Raspberry / Arduino / Xbee",
+            "src": "./img/Domotique.png"
+        },
+        "description": {
+            "text": "larem ipsum"
+        }
+        },
+        {
+        "information": {
+            "title": "Site internet : Blog Agriculture 4.0",
+            "date": "Janvier 2024",
+            "cadre": "Projet BTS - FHS",
+            "participant": 3,
+            "technologie": "JavaScript / HTML / CSS",
+            "src": "./img/Agriculture.png"
+        },
+        "description": {
+            "text": "larem ipsum"
+        }
+        }
+    ]
+}  

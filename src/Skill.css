@@ -16,7 +16,7 @@
     margin-top: 2%;
   }
   
-  @media (max-width: 1375px) {
+  @media (max-width: 1470px) {
     .grid-container {
       grid-template-columns: repeat(2, 1fr);
     }

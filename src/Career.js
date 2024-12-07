@@ -1,101 +1,77 @@
 import React from 'react';
-import { Typography, Box, CardMedia, Stack} from '@mui/material';
-import "./Career.css"
+import { Typography, Box, CardMedia } from '@mui/material';
+import './Career.css';
 
+function Career({ Time }) {
+    let textColor = Time === 'day' ? 'black' : 'white';
+    let shadColor = Time === 'day' ? '0px 4px 10px rgb(10 11 13 / 20%)' : '0px 4px 10px rgb(10 11 13)';
 
-function Career({ Time }){
-    let ColorT
-    Time === 'day' ? ColorT = "black" : ColorT = "white"
     const careerP = [
         {
             title: 'ISEN Ouest',
             date: 'Septembre 2025 - Juillet 2028',
-            text: "Entrer en CIPA 3 à l'école d'ingénieur de l'Institue Supérieur de l'Électrionique et du Numérique de Brest.",
-            src: './img/ISEN_Ouest.png',
-            dir: 'row-reverse',
-
+            text: "Entrée en CIPA 3 à l'école d'ingénieur de l'Institut Supérieur de l'Électronique et du Numérique de Brest.",
+            src: './img/ISEN.png',
+            side: 'right',
         },
         {
             title: 'BTS CIEL',
             date: 'Septembre 2023 - Juillet 2025',
-            text: `Obtention du BTS CIEL option Informatique et Électronique au lycée Jeanne d'Arc Vitré (35)`,
+            text: `Obtention du BTS CIEL option B Électronique et Réseau au lycée Jeanne d'Arc Vitré (35).`,
             src: './img/JAV.png',
-            dir: 'row',
+            side: 'left',
+            left: '8%',
         },
         {
             title: 'Stage Keolis Rennes',
             date: 'Mai 2024 - Juillet 2024',
-            text: `Keolis`,
+            text: `Stage chez Keolis blbalbalablablbalbalabdssss ssssssssssssssss ssssssss ssssss ssssssssss.`,
             src: './img/Keolis.png',
-            dir: 'row-reverse',
+            side: 'right',
+            right: 'right',
         },
         {
             title: 'BAC Pro Système Numérique',
             date: 'Mai 2024 - Juillet 2024',
-            text: `Obtention du baccalauréat système numérique option ARED avec mention Bien au lycée Jeanne d'Arc Vitré (35)`,
+            text: `Obtention du baccalauréat système numérique option ARED avec mention Bien au lycée Jeanne d'Arc Vitré (35).`,
             src: './img/JAV.png',
-            dir: 'row',
+            side: 'left',
+            left: '8%',
         },
     ];
-    
-    return(
-        <Box >
-            <div style={{  margin: '0 auto', width: '50%', }}>
-            <Typography variant="h3" align="center">
+
+    return (
+        <Box className="timeline-container">
+            <Typography variant="h3" align="center" sx={{ color: textColor }}>
                 Parcours
-                <hr className='hr' style={{width: '125px',}}/>
+                <hr className='hr' style={{ width: '135px',}}/>
             </Typography>
-            <Stack spacing={4} style={{ marginTop: '20px' }}>
-                {careerP.map((category) => (
-                    <div style={{ display: 'flex',
-                            alignItems: 'center',
-                            flexDirection: 'column', 
-                            }}>
-                    <CardMedia
-                        component="img"
-                        image= {category.src}
-                        alt= {category.title}
-                        sx={{
-                            width: '200px',
-                            height: '150px',
-                            backgroundColor: 'white',
-                            borderRadius: '30px',
-                            border: 'solid 3px rgb(40, 44, 52)',
-                            boxShadow: 'rgb(40, 44, 52) 0px 0px 4px 0px'
-                        }}
-                    />
-                    <div key={category.title} style={{ 
-                            padding: '2rem', 
-                            display: 'flex', 
-                            flexDirection: category.dir, 
-                            alignItems: 'center', 
-                            gap: '35px' 
-                        }}>
-                        <Box
-                            variant="h6"
-                            style={{
-                            borderBottom: '2px solid #ccc',
-                            paddingBottom: '0.5rem',
-                            color: 'white',
-                            }}
-                        >
-                            <Typography variant="h6" align="center" sx={{ color: ColorT,}}>
-                                <div>{category.date}</div>
+            <Box className="timeline">
+                {careerP.map((item, index) => (
+                    <Box key={index} className={`timeline-item ${item.side}`}>
+                        <Box className="timeline-content" sx={{ color: textColor }}>
+                            <Typography variant="h6" className="timeline-date">
+                                {item.date}
                             </Typography>
-                            <Typography variant="h4" align="center" sx={{ color: ColorT,}}>
-                                <div>{category.title}</div>
+                            <Typography variant="h4" className="timeline-title">
+                                {item.title}
                             </Typography>
-                            <Typography variant="h7" align="center" sx={{ color: ColorT,}}>
-                                <div>{category.text}</div>
+                            <Typography variant="body1" className="timeline-text">
+                                {item.text}
                             </Typography>
                         </Box>
-                    </div>
-                    </div>
+                        <CardMedia sx={{width: '155px', boxShadow: shadColor}}
+                            component="img"
+                            className="timeline-image"
+                            image={item.src}
+                            alt={item.title}
+                        />
+                    </Box>
                 ))}
-            </Stack>
-            </div>
+                <Box className="timeline-line" />
+            </Box>
         </Box>
     );
-};
+}
 
 export default Career;

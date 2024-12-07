@@ -1,3 +1,77 @@
-.Career-box{
-    border: solid black;
+.timeline-container {
+    position: relative;
+    width: 1000px; /* Largeur fixe pour éviter les problèmes de responsive */
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.timeline-header {
+    width: 150px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 43px;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #ccc;
+    transform: translateX(-50%);
+    height: 80%;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 60px;
+    width: 100%;
+    max-width: 945px;
+    z-index: 100;
+}
+
+.timeline-item.right {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.timeline-item.left {
+    flex-direction: row;
+    text-align: right;
+    left: 5.2%;
+}
+
+.timeline-image {
+    height: 145px;
+    border-radius: 30%;
+    background-color: white;
+    margin: 0 20px;
+}
+
+.timeline-content {
+    max-width: 350px; /* Largeur fixe pour garantir l'alignement */
+}
+
+.timeline-title {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.timeline-text {
+    font-size: 1rem;
+    line-height: 1.5;
 }

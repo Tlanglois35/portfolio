@@ -59,7 +59,7 @@ const skillIcons = {
 
 
     return (
-        <Box sx={{ padding: '2rem' }}>
+        <Box sx={{ padding: '5rem' }}>
 
             <Typography variant="h3" align="center" gutterBottom>
                 COMPÉTENCES
