@@ -48,10 +48,12 @@ const skillIcons = {
     Proteus: <img
                 src='./img/Proteus.png'
                 alt='Proteus'
+                className="skill-icon"
                 style={{height: '3rem',}}/>,
     Cisco: <img
                 src='./img/Cisco.png'
                 alt='Cisco'
+                className="skill-icon"
                 style={{height: '3rem',}}/>,
     GitHub: <FontAwesomeIcon icon={faGithub} size='3x' color='white'/>,
     Oscilloscope: <FontAwesomeIcon icon={faWaveSquare} size='3x' color='white'/>,
@@ -61,13 +63,13 @@ const skillIcons = {
     return (
         <Box sx={{ padding: '5rem' }}>
 
-            <Typography variant="h3" align="center" gutterBottom>
+            <Typography variant="h3" align="center" gutterBottom sx={{marginBottom: '5rem'}}>
                 COMPÉTENCES
                 <hr className='hr'/>
             </Typography>
             <div className='grid-container'>
             {categories.map((category) => (
-            <div
+            <div className='skil-container'
                 key={category.title}
                 style={{
                 padding: '1rem',
@@ -76,23 +78,24 @@ const skillIcons = {
                 boxShadow: "0px 0px 7px 0px rgb(40 44 52)",
                 }}
             >
-            <Typography
+            <Typography className='skill-cat'
                 variant="h6"
                 gutterBottom
                 style={{
-                borderBottom: '2px solid #ccc',
-                paddingBottom: '0.5rem',
-                color: 'white',
-                }}
+                    borderBottom: '2px solid #ccc',
+                    paddingBottom: '0.5rem',
+                    color: 'white',
+                    fontSize: '2rem', // Default font size
+                  }}
             >
             {category.title}
             </Typography>
-            <div
+            <div className='skill-box'
                 style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
-                gap: '1rem',
-                marginTop: '15px',
+                gap: '2rem',
+                marginTop: '30px',
                 }}
             >
             {category.skills.map((skill) => (
@@ -103,7 +106,7 @@ const skillIcons = {
                     }}
                 >
                 {skillIcons[skill]}
-                <Typography variant="body2" style={{ marginTop: '0.5rem', color: 'white', }}>
+                <Typography className='name-skill' variant="body2" style={{ marginTop: '0.5rem', color: 'white'}}>
                 {skill}
                 </Typography>
                 </div>

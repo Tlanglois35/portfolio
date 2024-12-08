@@ -15,7 +15,7 @@
     border-radius: 10px;
     opacity: 1;
     margin: 0 auto;
-    width: 5%;
+    width: 120px;
 }
 
 .footer-container{
@@ -48,9 +48,51 @@
 .contact > p {
     margin: 0px !important;
     text-align: justify;
-    font-size: calc(0.8rem + 0.6vw);
+    font-size: 1.5rem;
+}
+
+.box {
+    font-size: 20px;
 }
 
 .icon{
     min-width: 100px;
 }
+
+@media (max-width: 990px) {
+
+    .footer{
+        font-size: 20px;
+    }
+
+    .contact{
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    .footer-logo{
+        display: none;
+    }
+
+    .contact > p{
+        font-size: 2rem;
+    }
+
+    .contact{
+        font-size: 25px;
+        gap: 20px;
+    }
+
+    h1{
+        font-size: 3rem !important;
+    }
+
+    .footer{
+        font-size: 30px;
+    }
+    
+}
+

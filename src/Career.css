@@ -14,7 +14,7 @@
 .timeline {
     position: relative;
     margin-top: 40px;
-    padding: 20px 0;
+    padding: 20px 0 0;
 }
 
 .timeline-line {
@@ -25,7 +25,7 @@
     width: 4px;
     background-color: #ccc;
     transform: translateX(-50%);
-    height: 80%;
+    height: 92%;
 }
 
 .timeline-item {
@@ -62,16 +62,86 @@
 }
 
 .timeline-title {
-    font-weight: bold;
-    margin: 10px 0;
+    font-weight: bold !important;
+    margin: 10px 0 !important;
 }
 
 .timeline-date {
-    font-size: 0.9rem;
-    color: gray;
+    font-size: 0.9rem !important;
+    color: gray !important;
 }
 
 .timeline-text {
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+}
+
+@media (max-width: 767px) {
+
+    .timeline-item.left{
+        left: 0;
+        flex-direction: row-reverse;
+        text-align: start;
+    }
+
+    .timeline-item{
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .timeline-line{
+        left: 10.5%;
+        width: 5px;
+    }
+
+    .timeline-image{
+        width: 170px !important;
+        height: 170px !important;
+    }
+
+    .timeline-content{
+        max-width: 70%;
+    }
+
+    .timeline-text{
+        font-size: 1.5rem !important;
+    }
+    
+    .timeline-date {
+        font-size: 1.3rem !important;
+    }
+
+    .timeline-title{
+        font-size: 2.4rem !important;
+    }
+}
+
+@media (max-width: 552px) {
+
+    .timeline-line{
+        left: 12%;
+        top: 115px;
+        width: 7px;
+    }
+
+    .timeline-content{
+        max-width: 100%;
+    }
+
+    .timeline-text{
+        font-size: 2.5rem !important;
+    }
+    
+    .timeline-date {
+        font-size: 2.3rem !important;
+    }
+
+    .timeline-title{
+        font-size: 3.4rem !important;
+    }
+
+    .timeline-image{
+        width: 200px !important;
+        height: 200px !important;
+    }
 }

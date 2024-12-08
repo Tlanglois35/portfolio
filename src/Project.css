@@ -12,6 +12,7 @@
     z-index: 1000;
     display: flex;
     justify-content: center;
+    overflow-y: auto; /* Activer le scroll vertical dans l'overlay */
     align-items: center;
 }
 
@@ -19,23 +20,74 @@
 .overlay-content {
     padding: 2rem;
     border-radius: 8px;
-    max-width: 600px;
+    max-width: 800px;
     width: 90%;
+    height: auto;
+    max-height: 85%;
     text-align: center;
     position: relative;
     animation: fadeIn 0.3s ease-in-out;
+    top: 40px;
+    overflow-y: auto; /* Activer le scroll dans le contenu si nécessaire */
 }
 
+.overlay-head{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;;
+}
 
 .close-button {
-    position: absolute;
-    top: 0px;
-    right: 10px;
     background: none;
     border: none;
     font-size: 2rem;
-    color: #333;
     cursor: pointer;
+    position: fixed;
+}
+
+.overlayText{
+    font-size: 1.7rem !important;
+    display: flex;
+    align-items: center;
+    width: 100% !important;
+    justify-content: center;
+}
+
+.info{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 0px;
+}
+
+.info > p {
+    font-size: 1.5rem;
+    margin-bottom: 0px !important;
+    max-width: 100px;
+}
+
+.info-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.desc {
+    align-items: flex-start !important;
+    margin: 30px 0px;
+}
+
+.ico-c{
+    display: flex;
+    margin: 0px 50px 20px;
+    width: 70px;
+    padding: 8px 2px !important;
+    user-select: none;
+    opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -46,5 +98,92 @@
     to {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@media (max-width: 767px) {
+    .project-text{
+        font-size: 2rem !important;
+    }
+
+    .overlay-content {
+        max-width: 90%;
+        width: 90%;
+    }
+
+    .close-button{
+        color: black;
+        font-size: 50px;
+        top: 10.3%;
+        right: 10%;
+    }
+    .overlayText{
+        font-size: 34px !important;
+        max-width: 600px !important;
+    }
+
+    .overlay-head{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .desc-text{
+        font-size: 1.5rem !important;
+    }
+    
+}
+
+@media (max-width: 552px) {
+    .overlay-head{
+        justify-content: center;
+    }
+
+    .close-button {
+        top: 10.3%;
+        right: 10%;
+    }
+
+    .overlayText {
+        max-width: 600px !important;
+    }
+
+    .project-text{
+        font-size: 2.5rem !important;
+    }
+
+    .info > h6{
+        font-size: 2.2rem !important;
+    }
+
+    .info > p{
+        font-size: 2rem !important;
+        min-width: 180px !important;
+    }
+    
+}
+
+@media (max-width: 375px) {
+    .overlay-head{
+        justify-content: center;
+    }
+
+    .close-button {
+        position: fixed;;
+        top: 10.3%;
+        right: 9%;
+    }
+
+    .overlayText {
+        max-width: 750px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .close-button {
+        position: relative;
+        top: 0;
+        right: 0;
     }
 }

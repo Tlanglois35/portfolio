@@ -1,43 +1,70 @@
 {
     "projects": [
-        {
+      {
         "information": {
-            "title": "Spoti-4-NZXT : Intégration Spotify pour écran NZXT",
-            "date": "Novembre 2024",
-            "cadre": "Projet Personnel",
-            "participant": 1,
-            "technologie": "JavaScript / Python / HTML / CSS",
-            "src": "./img/NZXTPic.png"
+          "title": "Spoti-4-NZXT : Intégration Spotify pour écran NZXT",
+          "date": "Novembre 2024",
+          "cadre": "Projet Personnel",
+          "participant": 1,
+          "technologie": "JavaScript / Python / HTML / CSS",
+          "src": "./img/NZXTPic.png"
         },
         "description": {
-            "text": "larem ipsum"
-        }
+          "text": "Durant mes vacances de novembre, je me suis intéressé au système d’affichage de mon NZXT Kraken Z. Je me suis alors demandé s’il était possible d’intégrer Spotify et d’afficher ses informations directement sur l’écran.\n \nJ’ai donc commencé à effectuer des recherches sur la manière d’afficher des données sur cet écran. La méthode qui s’est avérée la plus simple consistait à utiliser l’application NZXT CAM et sa fonctionnalité d’intégration web.\n\nJ’ai ensuite commencé à coder en utilisant Spotipy pour interagir avec l’API de Spotify. J’ai créé une page en HTML et CSS permettant d’afficher l’image de l’album, une barre de progression représentant le temps d’écoute, ainsi qu’un fond dont la couleur s’adapte à la teinte dominante de l’image de l’album.\n\nCe projet n’est pas encore publié. Il est donc nécessaire de posséder un compte Spotify Developer et de renseigner ses identifiants dans un fichier .env pour pouvoir l’utiliser."
         },
-        {
+        "links": {
+          "GitHub": "https://github.com/Tlanglois35/Spoti-4-NZXT"
+        }
+      },
+      {
         "information": {
-            "title": "Projet Electronique : Système domotique",
-            "date": "Février 2024 - Mai 2024",
-            "cadre": "Projet Personnel",
-            "participant": 1,
-            "technologie": "JavaScript / Python / HTML / CSS / PHP / Raspberry / Arduino / Xbee",
-            "src": "./img/Domotique.png"
+          "title": "Projet Electronique : Système domotique",
+          "date": "Février 2024 - Mai 2024",
+          "cadre": "Projet Personnel",
+          "participant": 1,
+          "technologie": "JavaScript / Python / HTML / CSS / PHP / Raspberry / Arduino / Xbee",
+          "src": "./img/Domotique.png",
+          "link": "#"
         },
         "description": {
-            "text": "larem ipsum"
-        }
+          "text": "Lors de ma première année de BTS, nous avons eu la chance de réaliser des projets. Pour ma part, j’ai choisi de concevoir un système domotique avec une centrale.\n \nJ’ai commencé par créer un diagramme des exigences en SysML pour avoir une vision globale des fonctionnalités de chaque système et de leurs interconnexions. Ensuite, j’ai élaboré un Block Definition Diagram (BDD) afin de détailler les composants nécessaires.\n \nPour le matériel, j’ai opté pour des modules Itsy Bitsy d’Adafruit, qui offrent l’avantage d’être compacts et de gérer facilement les batteries. Pour la communication, j’ai utilisé des modules radio Xbee. J’ai également conçu trois cartes différentes correspondant à trois types de capteurs : un capteur d’humidité et de température, un capteur de luminosité, et un capteur de présence.\n \nPour la communication radio, j’ai développé un protocole maison, une solution simple bien que peu sécurisée. Chaque capteur envoyait une lettre d’identification suivie des données, puis terminait le message par la lettre 'B'. Ces messages étaient transmis à un débit constant. La centrale, un Raspberry Pi 3B+, recevait les caractères un à un via le module Xbee, ce qui permettait d’identifier la source et les données grâce aux lettres de début et de fin.\n \nUne fois les informations traitées, elles étaient organisées dans un fichier JSON. J’ai ensuite créé un fichier PHP pour développer une interface web. J’ai installé Apache afin de transformer le Raspberry Pi en serveur, rendant la page accessible via son adresse IP suivie de /index.php. Cette page web affichait les données mises à jour toutes les 5 secondes."
         },
-        {
+        "links": {
+          "link": "https://github.com/Tlanglois35/AG4"
+        }
+      },
+      {
         "information": {
-            "title": "Site internet : Blog Agriculture 4.0",
-            "date": "Janvier 2024",
-            "cadre": "Projet BTS - FHS",
-            "participant": 3,
-            "technologie": "JavaScript / HTML / CSS",
-            "src": "./img/Agriculture.png"
+          "title": "Site internet : Blog Agriculture 4.0",
+          "date": "Janvier 2024",
+          "cadre": "Projet BTS - FHS",
+          "participant": 3,
+          "technologie": "JavaScript / HTML / CSS",
+          "src": "./img/Agriculture.png"
         },
         "description": {
-            "text": "larem ipsum"
+          "text": "Dans le cadre de mon cours de FHS, nous avons réalisé, en groupe, un travail de recherche sur l’agriculture 4.0. Ce projet comprenait des micro-trottoirs et la création d’un site internet.\n \nNous avons structuré notre travail autour de trois thèmes principaux, en dehors de l’introduction : l’aspect climatique, l’aspect économique et l’aspect numérique. Chacun d’entre nous devait aborder ces thèmes selon la perspective d’un chercheur, d’un sociologue ou d’un économiste. Pour ma part, j’incarnais l’économiste et me chargeais de la partie économique.\n \nLe site internet a été réalisé en HTML, CSS et JavaScript. Nous avons regroupé nos idées dans une section dédiée. Nous avons également intégré les micro-trottoirs dans une section intitulée Questions et ajouté un glossaire pour expliquer les termes sortant du langage courant."
+        },
+        "links": {
+          "GitHub": "https://github.com/Tlanglois35/AG4"
         }
+      },
+      {
+        "information": {
+          "title": "Site internet : Phoner - devis",
+          "date": "2023",
+          "cadre": "Projet Professionnel",
+          "participant": 2,
+          "technologie": "React / Node.js / JavaScript / HTML / CSS",
+          "src": "./img/PhonerDev.png"
+        },
+        "description": {
+          "text": "Dans le cadre de mon alternance chez Phoner en tant que Web Developer, j’ai travaillé sur un site dédié à la création de devis pour la reprise de téléphones. Avec mon maître de stage, nous avons réfléchi au design général, aux différentes pages, ainsi qu’aux choix possibles et leurs implications sur le code.\n \nÀ partir des idées discutées, j’ai conçu le site et ajouté les fonctionnalités nécessaires pour établir une base solide. J’ai ensuite implémenté des actions dynamiques en fonction des sélections effectuées par l’utilisateur, tout en interconnectant les informations avec la base de données.\n \nPar exemple, lorsqu’un utilisateur sélectionne une tablette, d’autres options s’affichent en fonction de ce qui doit être réparé. Les choix de réparation sont définis à partir des données stockées dans la base, ce qui permet d’ajouter ou de supprimer des options dynamiquement sans modifier le code.\n \nUne fois toutes les sélections effectuées et le devis validé, l’utilisateur doit renseigner son email, son numéro de téléphone et son nom/prénom. Un email récapitulatif du devis nous est ensuite envoyé, et une copie est envoyée à l’utilisateur. Par ailleurs, le devis est automatiquement enregistré dans le CRM, d’où l’importance de maintenir une bonne synchronisation avec la base de données."
+        },
+        "links": {
+          "Webs": "https://devis.phoner.co/?campagne=site-menu"
         }
+      }
     ]
-}  
+  }
+  

@@ -18,11 +18,12 @@
 }
 
 .ico {
-  width: 60px;
+  width: 70px;
   padding: 8px 2px !important;
   user-select: none;
   transition: all 0.4s ease;
   opacity: 1;
+  margin: 0px 10px;
 }
 
 .ico:hover {
@@ -36,4 +37,88 @@
   fill: white;
   width: 130px;
   height: 50px;
+}
+
+.para{
+  display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+}
+
+.menuOver {
+  height: auto;
+  max-height: 0;
+  overflow: hidden; /* Cache le contenu au départ */
+  transition: max-height 0.5s ease-in-out; /* Transition douce pour ouverture et fermeture */
+}
+
+.menuOver.show {
+  max-height: 100vh; /* Ouverture du menu */
+}
+
+
+@media (max-width: 676px ) {
+  .NavBar{
+    justify-content: normal;
+    flex-direction: column;
+  }
+
+  .pill-nav{
+    display: none;
+  }
+
+  .menu {
+    display: block !important;
+    font-size: 5rem;
+  }
+
+  .fixed-style{
+    gap: 70%;
+  }
+
+  .ico{
+    display: none;
+  }
+
+  .logo {
+    fill: white;
+    width: 200px;
+    height: 85px;
+    margin: 17px 0;
+  }
+
+  .menuOver{
+    background-color: #282c34;
+    width: 100%;
+    top: 99%;
+    z-index: 5;
+    position: relative;
+  }
+
+  .para{
+    display: flex;
+    gap: 67%;
+    align-items: center;
+    width: 100%;
+    height: 112px;
+    justify-content: space-between;
+  }
+
+  .fontlabel{
+    font-size: 1.7rem !important;
+    max-width: 100% !important;
+  }
+
+  .menuOver > span {
+    display: none !important;
+  }
+}
+
+@media (max-width: 552px) {
+  .fontlabel{
+    font-size: 2.4rem !important;
+    max-width: 100% !important;
+  } 
 }

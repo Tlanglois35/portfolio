@@ -1,0 +1,59 @@
+{
+    "career": [
+        {
+            "title": "ISEN Ouest",
+            "date": "Septembre 2025 - Juillet 2028",
+            "text": "Entrée en CIPA 3 à l'école d'ingénieur de l'Institut Supérieur de l'Électronique et du Numérique de Brest.",
+            "src": "./img/ISEN.png",
+            "side": "right"
+        },
+        {
+            "title": "BTS CIEL",
+            "date": "Septembre 2023 - Juillet 2025",
+            "text": "Obtention du BTS CIEL option B Électronique et Réseau au lycée Jeanne d'Arc Vitré (35).",
+            "src": "./img/JAV.png",
+            "side": "left",
+            "left": "8%"
+        },
+        {
+            "title": "Stage chez Keolis Rennes",
+            "date": "Mai 2024 - Juillet 2024",
+            "text": "Dans le cadre de mon BTS, j'ai effectué un stage chez Keolis Rennes en tant que stagière technicien maintenance systèmes embarqués dans les bus. J'ai eu comme mission, la maintenance, intervention et prévention.",
+            "src": "./img/Keolis.png",
+            "side": "right",
+            "right": "right"
+        },
+        {
+            "title": "Alerance chez Phoner",
+            "date": "2022 - 2023",
+            "text": "Alternant chez Phoner en tant que web developper durant ma formation en D2WM à l'ENI",
+            "src": "./img/Phoner.jpg",
+            "side": "left",
+            "left": "8%"
+        },
+        {
+            "title": "BAC Pro Système Numérique",
+            "date": "Mai 2024 - Juillet 2024",
+            "text": "Obtention du baccalauréat système numérique option ARED avec mention Bien au lycée Jeanne d'Arc Vitré (35).",
+            "src": "./img/JAV.png",
+            "side": "right",
+            "right": "right"
+        },
+        {
+            "title": "Travail du Samedi chez Phoner",
+            "date": "2021 - 2022",
+            "text": "Durant mon dernier stage et jusqu'à l'obtention de mon BAC, j'ai effectué un travail de technicien/vendeur chez Phoner le Samedi",
+            "src": "./img/Phoner.jpg",
+            "side": "left",
+            "left": "8%"
+        },
+        {
+            "title": "Stage chez Phoner",
+            "date": "2021 - 2022",
+            "text": "Dans le cadre de mon BAC, j'ai effectué tout mes stages chez Phoner en tant que technicien/maintenance smartphone d'une durée de 4 semaines.",
+            "src": "./img/Phoner.jpg",
+            "side": "left",
+            "left": "8%"
+        }
+    ]
+}  

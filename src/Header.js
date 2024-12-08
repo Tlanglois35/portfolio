@@ -6,6 +6,18 @@ import { ReactComponent as Logo } from './icon.svg';
 import "./Header.css";
 
 function Header({ Time }) {
+
+    function updateVh() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+      
+    useEffect(() => {
+        updateVh();
+        window.addEventListener('resize', updateVh);
+        return () => window.removeEventListener('resize', updateVh);
+    }, []);
+    
     useEffect(() => {
         // Initialisation de Typed.js après le montage du composant
         const options = {
@@ -29,7 +41,7 @@ function Header({ Time }) {
     }, []); // Le tableau vide [] signifie que cet effet ne s'exécutera qu'une seule fois
 
     return (
-        <div className={`Header ${Time} vh-100 p-0 position-relative`}>
+        <div className={`Header ${Time}  p-0 position-relative`}>
             <div className='header-container'>
                 <div className='header-content'>
                     <div>

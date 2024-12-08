@@ -19,6 +19,7 @@ function App() {
   const presentationRef = useRef(null);
   const skillRef = useRef(null);
   const careerRef = useRef(null);
+  const projectRef = useRef(null);
   const contactRef = useRef(null);
 
   const Time = manualTime || automaticTime;
@@ -28,6 +29,7 @@ function App() {
     const presentationNode = presentationRef.current;
     const skillNode = skillRef.current;
     const careerNode = careerRef.current;
+    const projectNode = projectRef.current;
     const contactNode = contactRef.current;
   
     const observer = new IntersectionObserver(
@@ -44,6 +46,7 @@ function App() {
     if (presentationNode) observer.observe(presentationNode);
     if (skillNode) observer.observe(skillNode);
     if (careerNode) observer.observe(careerNode);
+    if (projectNode) observer.observe(projectNode);
     if (contactNode) observer.observe(contactNode);
   
     return () => {
@@ -51,7 +54,8 @@ function App() {
       if (presentationNode) observer.unobserve(presentationNode);
       if (skillNode) observer.unobserve(skillNode);
       if (careerNode) observer.unobserve(careerNode);
-      if (contactNode) observer.unobserve(contactNode)
+      if (projectNode) observer.unobserve(projectNode);
+      if (contactNode) observer.unobserve(contactNode);
     };
   }, []); // Gardez un tableau de dépendances vide si nécessaire
 
@@ -73,12 +77,12 @@ function App() {
         <div style={{padding: '40px',}}></div>
         <Career Time={Time} />
       </div>
-      <div id='project'>
-        <div style={{padding: '15px',}}></div>
+      <div id='project' ref={projectRef}>
+        <div style={{padding: '25px',}}></div>
         <Project Time={Time} />
       </div>
       <div id="contact" ref={contactRef}>
-        <div style={{padding: '50px',}}></div>
+        <div style={{padding: '10em',}}></div>
         <Footer Time={Time} />
       </div>
     </div>

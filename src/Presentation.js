@@ -63,6 +63,12 @@ function Présentation({ Time }) {
                             boxShadow: '0px 0px 7px 4px #575757ad',
                             top: '-70px',
                             position: 'relative',
+                            '@media (max-width: 990px)': {
+                                margin : '30px',
+                                top: '0px',
+                                width: '250px',
+                                height: '250px',
+                            }
                         }}
                     />
 
@@ -73,7 +79,15 @@ function Présentation({ Time }) {
                         variant="body1"
                         sx={{
                             fontSize: 'calc(0.86rem + 0.5vw)',
-                            textAlign: 'center',                        
+                            textAlign: 'center',
+
+                            '@media (max-width: 990px)': {
+                                fontSize: '2rem'
+                            },
+                            '@media (max-width: 720px)': {
+                                fontSize: '2.5rem'
+                                
+                            }
                         }}
                     >
                         <Texte />
