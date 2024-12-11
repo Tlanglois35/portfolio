@@ -11,7 +11,7 @@ function Career({ Time }) {
         <Box className="timeline-container">
             <Typography variant="h3" align="center" sx={{ color: textColor, marginBottom: '2rem', lineHeight: 'normal', letterSpacing: 'normal', fontSize: 'calc(1.3rem + 1.6vw)'}}>
                 PARCOURS
-                <hr className='hr' style={{ width: '140px',}}/>
+                <hr className='hr timeline-hr' style={{ width: '140px',}}/>
             </Typography>
             <Box className="timeline">
                 {CareerP.career.map((item, index) => (

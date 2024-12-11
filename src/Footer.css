@@ -112,3 +112,10 @@
     }
 }
 
+@media (max-width: 425px) {
+
+    .Footer > hr{
+        width: 65px !important;
+    }
+    
+}

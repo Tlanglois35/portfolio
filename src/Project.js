@@ -27,10 +27,17 @@ function Project({ Time }) {
     
 
     return (
-        <Box className="timeline-container" sx={{margin: '0 auto', width: '80%'}}>
+        <Box className="timeline-container" 
+        sx={{
+            margin: '0 auto',
+            width: '80%',
+            '@media (max-width: 425px)': {
+                width: '95%',
+              },
+            }}>
             <Typography variant="h3" align="center" sx={{ color: textColor, marginBottom: '3rem', fontSize: 'calc(1.3rem + 1.6vw)' }} >
                 PROJETS
-                <hr className="hr" style={{ width: '120px' }} />
+                <hr className="hr projet-hr" style={{ width: '120px' }} />
             </Typography>
             <div className="grid-container">
                 {Projet.projects.map((item, index) => (

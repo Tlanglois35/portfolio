@@ -81,4 +81,8 @@
     .p-ico{
         font-size: medium;
     }
+
+    .title-box > hr {
+        width: 125px !important;
+    }
 }

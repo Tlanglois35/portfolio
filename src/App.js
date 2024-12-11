@@ -70,11 +70,11 @@ function App() {
         <Presentation Time={Time} />
       </div >
       <div id="skill" ref={skillRef}>
-        <div style={{padding: '3rem',}}></div>
+        <div style={{padding: '4em',}}></div>
           <Skill Time={Time} />
       </div>
       <div id='career' ref={careerRef}>
-        <div style={{padding: '40px',}}></div>
+        <div style={{padding: '4em',}}></div>
         <Career Time={Time} />
       </div>
       <div id='project' ref={projectRef}>

@@ -191,6 +191,10 @@
     .overlayText {
         max-width: 750px !important;
     }
+
+    .projet-hr{
+        width: 90px !important;
+    }
 }
 
 @media (max-width: 320px) {

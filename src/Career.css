@@ -156,3 +156,24 @@
     }
 
 }
+
+@media (max-width: 425px) {
+
+    .timeline-item{
+        gap: 0;
+    }
+
+    .timeline-line{
+        top: 80px;
+    }
+
+    .timeline-hr {
+        width: 100px !important;
+    }
+
+    .timeline{
+        margin-top: 20px;
+        padding: 0px 0 0;
+    }
+
+}
