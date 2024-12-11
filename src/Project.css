@@ -36,7 +36,7 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;;
+    margin: 30px 0px 20px;
 }
 
 .close-button {
@@ -127,7 +127,6 @@
     .close-button{
         color: black;
         font-size: 30px;
-        top: 10.3%;
         right: 10%;
     }
     .overlayText{
@@ -173,20 +172,19 @@
     }
 
     .close-button {
-        top: 15%;
         right: 11%;
     }
     
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     .overlay-head{
         justify-content: center;
+        width: 90%;
     }
 
     .close-button {
         position: fixed;;
-        top: 10.3%;
         right: 9%;
     }
 
