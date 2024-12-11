@@ -37,7 +37,7 @@
 }
 
 .header-arrow{
-    bottom: 10px !important;
+    bottom: 25px !important;
     transition: 0.15s ease-in;
     user-select: none;
 }

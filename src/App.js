@@ -39,7 +39,7 @@ function App() {
           window.history.replaceState(null, '', `#${entry.target.id}`);
         }
       },
-      { threshold: 0.55 }
+      { threshold: 0.6 }
     );
   
     if (headerNode) observer.observe(headerNode);
