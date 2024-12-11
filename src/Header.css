@@ -37,7 +37,7 @@
 }
 
 .header-arrow{
-    bottom: 2% !important;
+    bottom: 5% !important;
     transition: 0.15s ease-in;
     user-select: none;
 }

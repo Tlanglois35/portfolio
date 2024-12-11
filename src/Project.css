@@ -127,7 +127,7 @@
     .close-button{
         color: black;
         font-size: 30px;
-        right: 10%;
+        right: 9%;
     }
     .overlayText{
         font-size: 25px !important;
@@ -172,7 +172,7 @@
     }
 
     .close-button {
-        right: 11%;
+        right: 9%;
     }
     
 }
@@ -185,11 +185,12 @@
 
     .close-button {
         position: fixed;;
-        right: 9%;
+        right: 7%;
     }
 
     .overlayText {
-        max-width: 750px !important;
+        width: 90% !important;
+        font-size: 20px !important;
     }
 
     .projet-hr{
@@ -199,8 +200,6 @@
 
 @media (max-width: 320px) {
     .close-button {
-        position: relative;
-        top: 0;
-        right: 0;
+        right: 10%;
     }
 }
