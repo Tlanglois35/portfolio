@@ -30,6 +30,7 @@ function Présentation({ Time }) {
                     '@media (max-width: 1300px)': {
                         width: '100%',
                         borderRadius: '0',
+                        margin: '0',
                     },
                 }}
             >
@@ -40,6 +41,9 @@ function Présentation({ Time }) {
                     variant="h3"
                     sx={{
                         textAlign: 'center',
+                        '@media (max-width: 767px)': {
+                            fontSize: 'calc(1.375rem + 1.5vw)',
+                        },
                     }}
                 >
                     PRÉSENTATION
@@ -66,8 +70,8 @@ function Présentation({ Time }) {
                             '@media (max-width: 990px)': {
                                 margin : '30px',
                                 top: '0px',
-                                width: '250px',
-                                height: '250px',
+                                width: '150px',
+                                height: '150px',
                             }
                         }}
                     />
@@ -82,17 +86,17 @@ function Présentation({ Time }) {
                             textAlign: 'center',
 
                             '@media (max-width: 990px)': {
-                                fontSize: '2rem'
+                                fontSize: 'large'
                             },
                             '@media (max-width: 720px)': {
-                                fontSize: '2.5rem'
+                                fontSize: 'medium'
                                 
                             }
                         }}
                     >
                         <Texte />
                     </Typography>
-                    <div className="d-flex justify-content-around mb-2 mt-4 gap-5">
+                    <div className="d-flex justify-content-around mb-2 gap-5" style={{marginTop:'15px'}}>
                     <a className='p-ico' href='/docs/CV_ThomasL.pdf' target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faFileLines} size='3x'/>
                         <span>CV</span>

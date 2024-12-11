@@ -61,9 +61,9 @@ const skillIcons = {
 
 
     return (
-        <Box sx={{ padding: '5rem' }}>
+        <Box sx={{ padding: '0rem' }}>
 
-            <Typography variant="h3" align="center" gutterBottom sx={{marginBottom: '5rem'}}>
+            <Typography variant="h3" align="center" className='s-title' gutterBottom sx={{marginBottom: '3rem'}}>
                 COMPÉTENCES
                 <hr className='hr'/>
             </Typography>
@@ -72,10 +72,12 @@ const skillIcons = {
             <div className='skil-container'
                 key={category.title}
                 style={{
-                padding: '1rem',
+                padding: '1.5rem 1rem',
                 borderRadius: '8px',
                 backgroundColor: "#282c34",
                 boxShadow: "0px 0px 7px 0px rgb(40 44 52)",
+                width: '100%',
+                margin: '0px auto'
                 }}
             >
             <Typography className='skill-cat'
@@ -106,7 +108,7 @@ const skillIcons = {
                     }}
                 >
                 {skillIcons[skill]}
-                <Typography className='name-skill' variant="body2" style={{ marginTop: '0.5rem', color: 'white'}}>
+                <Typography className='name-skill' variant="body2" style={{ marginTop: '0.5rem', color: 'white', lineHeight: 'normal'}}>
                 {skill}
                 </Typography>
                 </div>

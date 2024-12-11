@@ -18,7 +18,7 @@
 
 
 .overlay-content {
-    padding: 2rem;
+    padding: 0 2rem;
     border-radius: 8px;
     max-width: 800px;
     width: 90%;
@@ -59,26 +59,30 @@
     display: flex;
     gap: 2%;
     align-items: center;
-    justify-content: space-around;
     margin: 15px 0px;
 }
 
 .info > p {
-    font-size: 1.5rem;
+    text-align: start;
     margin-bottom: 0px !important;
-    max-width: 100px;
+    width: 35%;
+    font-weight: 500;
 }
 
 .info-icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 35px;
+    margin-bottom: 10px;
 }
 
 .desc {
     align-items: flex-start !important;
-    margin: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .ico-c{
@@ -88,6 +92,11 @@
     padding: 8px 2px !important;
     user-select: none;
     opacity: 1;
+}
+
+.globalInf{
+    width: 80%;
+    margin: 0 auto;
 }
 
 @keyframes fadeIn {
@@ -102,8 +111,12 @@
 }
 
 @media (max-width: 767px) {
+
     .project-text{
-        font-size: 2rem !important;
+        border-top: 2px solid rgb(204, 204, 204);
+        padding: 1rem;
+        color: white;
+        font-size: calc(0.7rem + 1.5vw) !important;
     }
 
     .overlay-content {
@@ -113,13 +126,12 @@
 
     .close-button{
         color: black;
-        font-size: 50px;
+        font-size: 30px;
         top: 10.3%;
         right: 10%;
     }
     .overlayText{
-        font-size: 34px !important;
-        max-width: 600px !important;
+        font-size: 25px !important;
     }
 
     .overlay-head{
@@ -127,10 +139,30 @@
         flex-direction: row-reverse;
         align-items: center;
         justify-content: center;
+        width: 80%;
+        margin: 20px auto 10px;
+    }
+
+    .info > h6{
+        font-size: 15px !important;
+    }
+
+    .info > p {
+        font-size: 15px;
+        min-width: 125px !important;
     }
 
     .desc-text{
         font-size: 1.5rem !important;
+    }
+
+    .desc {
+        width: 100%;
+    }
+
+    .globalInf{
+        width: 100%;
+        margin: 0;
     }
     
 }
@@ -141,25 +173,8 @@
     }
 
     .close-button {
-        top: 10.3%;
-        right: 10%;
-    }
-
-    .overlayText {
-        max-width: 600px !important;
-    }
-
-    .project-text{
-        font-size: 2.5rem !important;
-    }
-
-    .info > h6{
-        font-size: 2.2rem !important;
-    }
-
-    .info > p{
-        font-size: 2rem !important;
-        min-width: 180px !important;
+        top: 15%;
+        right: 11%;
     }
     
 }

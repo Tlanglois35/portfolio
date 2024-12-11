@@ -108,7 +108,7 @@ function NavBar({ Time, setManualTime }) {
         ) : (
           <div className='menu' style={{ display: 'none'}} onClick={() => handleMenuOpen()}><FontAwesomeIcon icon={faBars} /></div>
         )}
-        <div>
+        <div className='visi'>
           {Time === 'day' ? (
             <div className='ico'>
               <FontAwesomeIcon icon={faSun} size="2x" onClick={() => setManualTime('night')} />
@@ -120,6 +120,7 @@ function NavBar({ Time, setManualTime }) {
           )}
         </div>
       </div>
+
       {menuVisible && (
         <div className='menuOver'>
           <div className='menuOver-content'>
@@ -138,10 +139,11 @@ function NavBar({ Time, setManualTime }) {
                   height: 'calc(var(--vh, 1vh) * 25)',
                   margin: '0px 10px',
                 },
-                '@media (max-width: 552px)': {
+                '@media (max-width: 767px)': {
                   '& .MuiTabs-flexContainer': {
-                    gap: '40px',
-                    margin: '30px 40px',
+                    gap: '15px',
+                    margin: '5px 20px',
+                    height: '100%',
                   },
                 }
               }}
@@ -153,11 +155,11 @@ function NavBar({ Time, setManualTime }) {
               <Tab label="Contact" component="a" href="#contact" className='fontlabel'/>
             </Tabs>
             {Time === 'day' ? (
-              <div className='ico-c fontlabel' style={{display: 'block'}}>
+              <div className='ico-c fontlabel' style={{display: 'flex', margin: '10px 35px'}}>
                 <FontAwesomeIcon icon={faSun} size="2x" onClick={() => setManualTime('night')} />
               </div>
             ) : (
-              <div className='ico-c fontlabel' style={{display: 'block'}}>
+              <div className='ico-c fontlabel' style={{display: 'flex', margin: '10px 35px'}}>
                 <FontAwesomeIcon icon={faMoon} size="2x" onClick={() => setManualTime('day')} />
               </div>
             )}

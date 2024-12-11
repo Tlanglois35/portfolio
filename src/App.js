@@ -78,11 +78,11 @@ function App() {
         <Career Time={Time} />
       </div>
       <div id='project' ref={projectRef}>
-        <div style={{padding: '25px',}}></div>
+        <div style={{padding: '20px',}}></div>
         <Project Time={Time} />
       </div>
       <div id="contact" ref={contactRef}>
-        <div style={{padding: '10em',}}></div>
+        <div style={{padding: '3em',}}></div>
         <Footer Time={Time} />
       </div>
     </div>

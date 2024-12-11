@@ -22,9 +22,9 @@ function Header({ Time }) {
         // Initialisation de Typed.js après le montage du composant
         const options = {
             strings: [
-                "BTS 2e année prépa Ingénieur ISEN OUEST",
+                "BTS 2ème année prépa Ingénieur ISEN OUEST.",
                 "Recherche d'atlerance",
-                "Recherche d'alternance Ingénieur en automatisme "
+                "Recherche d'alternance Ingénieur en automatisme / mécatronique / systèmes embarqués. "
             ],
             typeSpeed: 80,
             backSpeed: 40,
@@ -58,7 +58,7 @@ function Header({ Time }) {
             </div>
             <a href="#presentation" style={{ textDecoration: 'none', color: 'inherit' }}>
             <div className="header-arrow position-absolute start-50 translate-middle-x opacity-75">
-                <FontAwesomeIcon icon={faChevronDown} size="5x" />
+                <FontAwesomeIcon icon={faChevronDown} size="4x" />
             </div>
             </a>
         </div>

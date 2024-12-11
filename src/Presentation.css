@@ -11,7 +11,7 @@
     border-radius: 10px;
     opacity: 1;
     margin: 0.5vh auto;
-    width: 69%;
+    width: 170px;
 }
 
 .title-content{
@@ -59,11 +59,16 @@
     }
 
     .p-ico{
-        font-size: 25px;
+        font-size: large;
     }
 }
 
 @media (max-width: 552px){
+
+    .title-box{
+        margin-bottom: 0;
+    }
+
     .title-content{
         gap: 0px;
         flex-direction: column;
@@ -74,6 +79,6 @@
     }
     
     .p-ico{
-        font-size: 30px;
+        font-size: medium;
     }
 }

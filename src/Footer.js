@@ -32,17 +32,17 @@ function Footer({ Time }){
                             <FontAwesomeIcon icon={faLocationDot} size='3x' className='icon position'/>
                         </div>
                     </div>
-                    <div className="ico box d-flex justify-content-around mb-2 mt-4 w-100">
+                    <div className="ico box d-flex justify-content-between w-100">
                         <a className='p-ico footer' href='/docs/CV_ThomasL.pdf' target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faFileLines} size='3x'/>
+                            <FontAwesomeIcon icon={faFileLines} size='2x'/>
                             <span>CV</span>
                         </a>
                         <a className='p-ico footer' href='https://www.linkedin.com/in/thomas-langlois-ba904b226/?trk=opento_sprofile_goalscard' target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faLinkedin} size='3x'/>
+                            <FontAwesomeIcon icon={faLinkedin} size='2x'/>
                             <span>LinkedIn</span>
                         </a>
                         <a className='p-ico footer' href='https://github.com/Tlanglois35' target="_blank" rel="noopener noreferrer">
-                            <FontAwesomeIcon icon={faGithub} size='3x'/>
+                            <FontAwesomeIcon icon={faGithub} size='2x'/>
                             <span>GitHub</span>
                         </a>
                     </div>

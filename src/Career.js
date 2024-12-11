@@ -9,18 +9,18 @@ function Career({ Time }) {
 
     return (
         <Box className="timeline-container">
-            <Typography variant="h3" align="center" sx={{ color: textColor, marginBottom: '5rem'}}>
+            <Typography variant="h3" align="center" sx={{ color: textColor, marginBottom: '2rem', lineHeight: 'normal', letterSpacing: 'normal', fontSize: 'calc(1.3rem + 1.6vw)'}}>
                 PARCOURS
-                <hr className='hr' style={{ width: '180px',}}/>
+                <hr className='hr' style={{ width: '140px',}}/>
             </Typography>
             <Box className="timeline">
                 {CareerP.career.map((item, index) => (
                     <Box key={index} className={`timeline-item ${item.side}`}>
                         <Box className="timeline-content" sx={{ color: textColor }}>
-                            <Typography variant="h6" className="timeline-date">
+                            <Typography variant="h6" className="timeline-date" style={{lineHeight: 'normal !important'}}>
                                 {item.date}
                             </Typography>
-                            <Typography variant="h4" className="timeline-title">
+                            <Typography variant="h4" className="timeline-title" style={{lineHeight: 'normal !important'}}>
                                 {item.title}
                             </Typography>
                             <Typography variant="body1" className="timeline-text">

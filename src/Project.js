@@ -27,10 +27,10 @@ function Project({ Time }) {
     
 
     return (
-        <Box className="timeline-container" sx={{padding: '5rem'}}>
-            <Typography variant="h3" align="center" sx={{ color: textColor, marginBottom: '5rem' }} >
+        <Box className="timeline-container" sx={{margin: '0 auto', width: '80%'}}>
+            <Typography variant="h3" align="center" sx={{ color: textColor, marginBottom: '3rem', fontSize: 'calc(1.3rem + 1.6vw)' }} >
                 PROJETS
-                <hr className="hr" style={{ width: '170px' }} />
+                <hr className="hr" style={{ width: '120px' }} />
             </Typography>
             <div className="grid-container">
                 {Projet.projects.map((item, index) => (
@@ -83,67 +83,66 @@ function Project({ Time }) {
                         <img
                             src={currentProject.information.src}
                             alt={currentProject.information.title}
-                            style={{ maxWidth: '80%', borderRadius: '8px', boxShadow: 'rgb(40, 44, 52) 0px 0px 7px 0px', marginBottom: '15px'}}
+                            style={{ maxWidth: '95%', borderRadius: '8px', boxShadow: 'rgb(40, 44, 52) 0px 0px 7px 0px', marginBottom: '15px', marginTop: '5px'}}
                         />
+                        <div className='globalInf'>
                         <div className='info cadre'>
-                            <p style={{ color: textColor, minWidth: '137px'}}>Cadre : </p>
+                            <p style={{ color: textColor, minWidth: '125px'}}>Cadre : </p>
                             <Typography  variant="h6"
                                 gutterBottom
                                 style={{
                                     color: textColor,
-                                    fontSize: '1.5rem',
+                                    fontSize: '1.2rem',
                                     marginBottom: '0px',
-                                    width: '400px',
                                     textAlign: 'left',
                                 }}>
                                 {currentProject.information.cadre}
                             </Typography>
                         </div>                        
                         <div className='info date'>
-                            <p style={{ color: textColor, minWidth: '137px'}}>Date : </p>
+                            <p style={{ color: textColor, minWidth: '125px'}}>Date : </p>
                             <Typography  variant="h6"
                                 gutterBottom
                                 style={{
                                     color: textColor,
-                                    fontSize: '1.5rem',
+                                    fontSize: '1.2rem',
                                     marginBottom: '0px',
-                                    width: '400px',
                                     textAlign: 'left',
                                 }}>
                                 {currentProject.information.date}
                             </Typography>
                         </div>
                         <div className='info part'>
-                            <p style={{ color: textColor, minWidth: '137px'}}>Participant : </p>
+                            <p style={{ color: textColor, minWidth: '125px'}}>Participant : </p>
                             <Typography  variant="h6"
                                 gutterBottom
                                 style={{
                                     color: textColor,
-                                    fontSize: '1.5rem',
+                                    fontSize: '1.2rem',
                                     marginBottom: '0px',
-                                    width: '400px',
                                     textAlign: 'left',
                                 }}>
                                 {currentProject.information.participant}
                             </Typography>
                         </div>
                         <div className='info tek'>
-                            <p style={{ color: textColor, minWidth: '137px'}}>Technologies utilisés : </p>
+                            <p style={{ color: textColor, minWidth: '125px'}}>Technologies utilisés : </p>
                             <Typography  variant="h6"
                                 gutterBottom
                                 style={{
                                     color: textColor,
-                                    fontSize: '1.5rem',
+                                    fontSize: '1.2rem',
                                     marginBottom: '0px',
-                                    width: '400px',
                                     textAlign: 'left',
+                                    maxWidth: '330px'
                                 }}>
                                 {currentProject.information.technologie}
                             </Typography>
                         </div>
+                        </div>
                         <hr />
                         <div className='info desc'>
-                            <p style={{ color: textColor, minWidth: '137px'}}>Description : </p>
+                            <p style={{ color: textColor, minWidth: '125px'}}>Description : </p>
                             <Typography  variant="h6"
                                 gutterBottom
                                 className='desc-text'
@@ -151,7 +150,7 @@ function Project({ Time }) {
                                     color: textColor,
                                     fontSize: '1.2rem',
                                     marginBottom: '0px',
-                                    width: '500px',
+                                    width: '100%',
                                     textAlign: 'left',
                                 }}>
                                     {currentProject.description.text.split('\n').map((line, index) => (

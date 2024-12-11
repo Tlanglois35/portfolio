@@ -14,6 +14,8 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2%;
+    width: 80%;
+    margin: 0 auto;
   }
   
   @media (max-width: 1470px) {
@@ -23,44 +25,50 @@
   }
 
   @media (max-width: 767px) {
+
+    .s-title{
+      font-size: calc(1.3rem + .6vw) !important;
+    }
+
     .grid-container {
       grid-template-columns: 1fr;
     }
 
-    .skill-box{
-        font-size: 25px !important;
+    .skill > h3{
+      font-size: calc(1.3rem + .6vw);
+      font-weight: 500;
     }
 
-    .skill-cat{
-      font-size: 2.7rem !important;
+    .skill > hr{
+      box-sizing: border-box;
+      height: 0px;
+      border: solid 2px;
+      border-radius: 10px;
+      opacity: 1;
+      margin: 0.5vh auto;
+      width: 130px;
     }
 
-    .name-skill{
-      font-size: 1.7rem !important;
-    }
-    
-    .skill-icon{
-      width:75px !important;
-      height: 75px !important;
-    }
-  }
-
-  @media (max-width: 552px) {
     .skill-box{
       grid-template-columns: repeat(2, 1fr) !important;
-      font-size: 35px !important;
+      font-size: 1rem !important;
     }
 
     .skill-cat{
-      font-size: 3rem !important;
+      font-size: 24px !important;
+      text-align: center;
+    }
+
+    .skill > .fa-3x {
+      font-size: 5vh;
     }
 
     .name-skill{
-      font-size: 2rem !important;
+      font-size: 20px !important;
     }
     
     .skill-icon{
-      width: 105px !important;
-      height: 105px !important;
+      width: 44px !important;
+      height: 44px !important;
     }
   }
