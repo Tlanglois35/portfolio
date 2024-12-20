@@ -58,7 +58,7 @@ function Présentation({ Time }) {
                     <CardMedia
                         component="img"
                         image="./img/pic_M.png"
-                        alt='selfie'
+                        alt='selfie Thomas Langlois'
                         sx={{
                             width: '300px',
                             height: '300px',
