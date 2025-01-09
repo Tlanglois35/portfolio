@@ -42,7 +42,7 @@ function App() {
           window.history.replaceState(null, '', `#${entry.target.id}`);
         }
       },
-      { threshold: 0.6 }
+      { threshold: 0.5 }
     );
   
     if (headerNode) observer.observe(headerNode);
@@ -78,8 +78,8 @@ function App() {
         <div style={{padding: '4em',}}></div>
           <Skill Time={Time} />
       </div>
-      <div id="certif" ref={certifRef}>
-        <div style={{padding: '2em',}}></div>
+      <div id="certification" ref={certifRef}>
+        <div style={{padding: '6em',}}></div>
           <Certif Time={Time} />
       </div>
       <div id='career' ref={careerRef}>

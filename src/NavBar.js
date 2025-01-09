@@ -48,12 +48,14 @@ function NavBar({ Time, setManualTime }) {
         return 0;
       case '#skill':
         return 1;
-      case '#career':
+      case '#skill':
         return 2;
-      case '#project':
+      case '#career':
         return 3;
-      case '#contact':
+      case '#project':
         return 4;
+      case '#contact':
+        return 5;
       default:
         return null;
     }
@@ -67,7 +69,7 @@ function NavBar({ Time, setManualTime }) {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    const hash = ['#presentation', '#skill', '#career', '#project', '#contact'][newValue] || '#header';
+    const hash = ['#presentation', '#skill','#certification', '#career', '#project', '#contact'][newValue] || '#header';
     window.history.replaceState(null, '', hash);
   };
 
@@ -98,6 +100,7 @@ function NavBar({ Time, setManualTime }) {
           >
             <Tab label="Présentation" component="a" href="#presentation" sx={{ fontSize: '1rem'}} />
             <Tab label="Compétences" component="a" href="#skill" sx={{ fontSize: '1rem'}}/>
+            <Tab label="Certification" component="a" href="#certification" sx={{ fontSize: '1rem'}}/>
             <Tab label="Parcours" component="a" href="#career" sx={{ fontSize: '1rem'}}/>
             <Tab label="Projets" component="a" href="#project" sx={{ fontSize: '1rem'}}/>
             <Tab label="Contact" component="a" href="#contact" sx={{ fontSize: '1rem'}}/>
@@ -150,6 +153,7 @@ function NavBar({ Time, setManualTime }) {
             >
               <Tab label="Présentation" component="a" href="#presentation" className='fontlabel'/>
               <Tab label="Compétences" component="a" href="#skill" className='fontlabel'/>
+              <Tab label="Certification" component="a" href="#certification" className='fontlabel'/>
               <Tab label="Parcours" component="a" href="#career" className='fontlabel'/>
               <Tab label="Projets" component="a" href="#project" className='fontlabel'/>
               <Tab label="Contact" component="a" href="#contact" className='fontlabel'/>
