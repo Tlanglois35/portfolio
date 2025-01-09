@@ -1,0 +1,23 @@
+.certif {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.certif-item {
+    position: relative;
+    display: grid;
+    align-items: center;
+    margin: 20px 0px;
+    width: 100%;
+    max-width: 945px;
+    z-index: 100;
+    justify-content: center;
+    justify-items: center;
+}
+
+.certif-text {
+    font-size: 2rem !important;
+    line-height: 1.5 !important;
+}

@@ -3,8 +3,9 @@ import Header from "./Header.js";
 import Presentation from './Presentation.js';
 import Footer from './Footer.js';
 import Skill from './Skill.js';
-import Career from './Career.js'
-import Project from './Project.js'
+import Certif from './Certif.js';
+import Career from './Career.js';
+import Project from './Project.js';
 import useClassName from './Clock.js';
 import { useState, useRef, useEffect } from 'react';
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
   const headerRef = useRef(null);
   const presentationRef = useRef(null);
   const skillRef = useRef(null);
+  const certifRef = useRef(null);
   const careerRef = useRef(null);
   const projectRef = useRef(null);
   const contactRef = useRef(null);
@@ -28,6 +30,7 @@ function App() {
     const headerNode = headerRef.current; 
     const presentationNode = presentationRef.current;
     const skillNode = skillRef.current;
+    const certifNode = certifRef.current;
     const careerNode = careerRef.current;
     const projectNode = projectRef.current;
     const contactNode = contactRef.current;
@@ -45,6 +48,7 @@ function App() {
     if (headerNode) observer.observe(headerNode);
     if (presentationNode) observer.observe(presentationNode);
     if (skillNode) observer.observe(skillNode);
+    if (certifNode) observer.observe(certifNode);
     if (careerNode) observer.observe(careerNode);
     if (projectNode) observer.observe(projectNode);
     if (contactNode) observer.observe(contactNode);
@@ -53,6 +57,7 @@ function App() {
       if (headerNode) observer.unobserve(headerNode);
       if (presentationNode) observer.unobserve(presentationNode);
       if (skillNode) observer.unobserve(skillNode);
+      if (certifNode) observer.unobserve(certifNode);
       if (careerNode) observer.unobserve(careerNode);
       if (projectNode) observer.unobserve(projectNode);
       if (contactNode) observer.unobserve(contactNode);
@@ -73,8 +78,12 @@ function App() {
         <div style={{padding: '4em',}}></div>
           <Skill Time={Time} />
       </div>
+      <div id="certif" ref={certifRef}>
+        <div style={{padding: '2em',}}></div>
+          <Certif Time={Time} />
+      </div>
       <div id='career' ref={careerRef}>
-        <div style={{padding: '4em',}}></div>
+        <div style={{padding: '2em',}}></div>
         <Career Time={Time} />
       </div>
       <div id='project' ref={projectRef}>
