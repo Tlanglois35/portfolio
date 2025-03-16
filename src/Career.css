@@ -55,6 +55,7 @@
     border-radius: 30%;
     background-color: white;
     margin: 0 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .timeline-content {

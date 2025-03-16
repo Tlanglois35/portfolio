@@ -4,7 +4,15 @@
             "title": "Voltaire",
             "date": "Decembre 2024",
             "point": "524 Points",
-            "src": "./img/Voltaire.png"
+            "src": "./img/Voltaire.png",
+            "dc": "/docs/voltaire_doc.pdf"
+        },
+        {
+            "title": "TOEIC",
+            "date": "Mars 2025",
+            "point": "835 Points",
+            "src": "./img/TOEIC_logo.png",
+            "dc": "/docs/toeic_doc.pdf"
         }
     ]
 } 
